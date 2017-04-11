@@ -1,8 +1,8 @@
 {
   "name": "spa",
   "version": "1.0.0",
-  "description": "Basic React App",
-  "main": "index.js",
+  "description": "React Router Sample App",
+  "main": "spa.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
