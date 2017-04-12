@@ -10405,6 +10405,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 "use strict";
 
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
@@ -10417,168 +10419,218 @@ var _reactRouterDom = __webpack_require__(92);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var App = _react2.default.createClass({
-  displayName: 'App',
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  render: function render() {
-    return _react2.default.createElement(
-      _reactRouterDom.BrowserRouter,
-      null,
-      _react2.default.createElement(
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_Component) {
+  _inherits(App, _Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+  }
+
+  _createClass(App, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _reactRouterDom.BrowserRouter,
+        null,
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Simple SPA'
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'header' },
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouterDom.NavLink,
+                { to: '/home', activeClassName: 'active' },
+                'Home'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouterDom.NavLink,
+                { to: '/stuff', activeClassName: 'active' },
+                'Stuff'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouterDom.NavLink,
+                { to: '/contact', activeClassName: 'active' },
+                'Contact'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: Home }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/stuff', component: Stuff }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: Contact })
+          )
+        )
+      );
+    }
+  }]);
+
+  return App;
+}(_react.Component);
+
+var Home = function (_Component2) {
+  _inherits(Home, _Component2);
+
+  function Home() {
+    _classCallCheck(this, Home);
+
+    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+  }
+
+  _createClass(Home, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
-          'h1',
+          'h2',
           null,
-          'Simple SPA'
+          'Home'
         ),
         _react2.default.createElement(
-          'ul',
-          { className: 'header' },
+          'p',
+          null,
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus commodo tortor, at scelerisque magna finibus id. Vestibulum eget urna diam. Nam feugiat pretium velit non ultrices. Praesent eleifend placerat justo, ut posuere tortor elementum sodales. Proin porttitor nunc ac quam porttitor, sit amet tincidunt nulla pharetra. Proin placerat lacus nisi, et sodales est lobortis ut. Maecenas finibus risus velit, non laoreet eros bibendum. Morbi bibendum, nunc vel pellentesque rhoncus, orci justo tincidunt erat, non vulputate urna lacus id metus. Sed eleifend risus non dictum congue. Aliquam odio ligula, blandit dignissim neque a, dignissim convallis tortor. Mauris quis tristique metus.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Sed fermentum congue urna vel accumsan. Integer aliquet diam venenatis, pretium leo id, condimentum tortor. Curabitur quam ligula, congue non dolor nec, ullamcorper fermentum odio. Ut neque erat. Cras euismod magna eu libero efficitur, vel ornare ligula auctor. Mauris urna mauris, venenatis eu egestas ut, semper sit amet mauris. Etiam sed diam nulla. Donec volutpat lacus. Phasellus dictum sagittis urna, elementum ullamcorper lacus elementum vel. Nam mattis nec libero laoreet dictum. Etiam eget nulla scelerisque, aliquet odio et, fermentum lorem. Nulla suscipit, ligula sed tincidunt rutrum, tortor purus volutpat purus, ut pulvinar neque ligula vitae orci.'
+        )
+      );
+    }
+  }]);
+
+  return Home;
+}(_react.Component);
+
+var Stuff = function (_Component3) {
+  _inherits(Stuff, _Component3);
+
+  function Stuff() {
+    _classCallCheck(this, Stuff);
+
+    return _possibleConstructorReturn(this, (Stuff.__proto__ || Object.getPrototypeOf(Stuff)).apply(this, arguments));
+  }
+
+  _createClass(Stuff, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Stuff'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus nibh, semper.'
+        ),
+        _react2.default.createElement(
+          'ol',
+          null,
           _react2.default.createElement(
             'li',
             null,
-            _react2.default.createElement(
-              _reactRouterDom.NavLink,
-              { to: '/home', activeClassName: 'active' },
-              'Home'
-            )
+            'Nulla pulvinar diam'
           ),
           _react2.default.createElement(
             'li',
             null,
-            _react2.default.createElement(
-              _reactRouterDom.NavLink,
-              { to: '/stuff', activeClassName: 'active' },
-              'Stuff'
-            )
+            'Facilis bibendum'
           ),
           _react2.default.createElement(
             'li',
             null,
-            _react2.default.createElement(
-              _reactRouterDom.NavLink,
-              { to: '/contact', activeClassName: 'active' },
-              'Contact'
-            )
+            'Vestibulum vulputate'
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            'Eget erat'
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            'Id porttitor'
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'content' },
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/home', component: Home }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/stuff', component: Stuff }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: Contact })
         )
-      )
-    );
+      );
+    }
+  }]);
+
+  return Stuff;
+}(_react.Component);
+
+var Contact = function (_Component4) {
+  _inherits(Contact, _Component4);
+
+  function Contact() {
+    _classCallCheck(this, Contact);
+
+    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
   }
-});
 
-var Home = _react2.default.createClass({
-  displayName: 'Home',
-
-  render: function render() {
-    return _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(
-        'h2',
-        null,
-        'Home'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus commodo tortor, at scelerisque magna finibus id. Vestibulum eget urna diam. Nam feugiat pretium velit non ultrices. Praesent eleifend placerat justo, ut posuere tortor elementum sodales. Proin porttitor nunc ac quam porttitor, sit amet tincidunt nulla pharetra. Proin placerat lacus nisi, et sodales est lobortis ut. Maecenas finibus risus velit, non laoreet eros bibendum. Morbi bibendum, nunc vel pellentesque rhoncus, orci justo tincidunt erat, non vulputate urna lacus id metus. Sed eleifend risus non dictum congue. Aliquam odio ligula, blandit dignissim neque a, dignissim convallis tortor. Mauris quis tristique metus.'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'Sed fermentum congue urna vel accumsan. Integer aliquet diam venenatis, pretium leo id, condimentum tortor. Curabitur quam ligula, congue non dolor nec, ullamcorper fermentum odio. Ut neque erat. Cras euismod magna eu libero efficitur, vel ornare ligula auctor. Mauris urna mauris, venenatis eu egestas ut, semper sit amet mauris. Etiam sed diam nulla. Donec volutpat lacus. Phasellus dictum sagittis urna, elementum ullamcorper lacus elementum vel. Nam mattis nec libero laoreet dictum. Etiam eget nulla scelerisque, aliquet odio et, fermentum lorem. Nulla suscipit, ligula sed tincidunt rutrum, tortor purus volutpat purus, ut pulvinar neque ligula vitae orci.'
-      )
-    );
-  }
-});
-
-var Stuff = _react2.default.createClass({
-  displayName: 'Stuff',
-
-  render: function render() {
-    return _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(
-        'h2',
-        null,
-        'Stuff'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus nibh, semper.'
-      ),
-      _react2.default.createElement(
-        'ol',
+  _createClass(Contact, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
         null,
         _react2.default.createElement(
-          'li',
+          'h2',
           null,
-          'Nulla pulvinar diam'
+          'Got Questions?'
         ),
         _react2.default.createElement(
-          'li',
+          'p',
           null,
-          'Facilis bibendum'
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
-          'Vestibulum vulputate'
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
-          'Eget erat'
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
-          'Id porttitor'
+          'Then call ',
+          _react2.default.createElement(
+            'a',
+            { href: 'tel:(555) 555-5555' },
+            '(555) 555-5555'
+          ),
+          ' . Our operators are standing by.'
         )
-      )
-    );
-  }
-});
+      );
+    }
+  }]);
 
-var Contact = _react2.default.createClass({
-  displayName: 'Contact',
+  return Contact;
+}(_react.Component);
 
-  render: function render() {
-    return _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(
-        'h2',
-        null,
-        'Got Questions?'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'Then call ',
-        _react2.default.createElement(
-          'a',
-          { href: 'tel:(555) 555-5555' },
-          '(555) 555-5555'
-        ),
-        ' . Our operators are standing by.'
-      )
-    );
-  }
-});
-
-_reactDom2.default.render(_react2.default.createElement(App, null), document.querySelector('#main'));
+_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('main'));
 
 /***/ }),
 /* 94 */
